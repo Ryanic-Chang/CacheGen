@@ -29,7 +29,7 @@ dataset_name 可选：tqa_qwen nqa_qwen mqa_qwen。
 
 ## Step 4：生成阶段
 ```
-python run_cachegen_from_decoded_kv.py --model_id Qwen/Qwen3-1.7 --start 0 --end 50 --num_gpus 1 --results_str result --results_dir ./tqa_result --dataset_name tqa_qwen --calculate_metric 1
+python run_cachegen_from_decoded_kv.py --model_id Qwen/Qwen3-1.7B --start 0 --end 50 --num_gpus 1 --results_str result --results_dir ./tqa_result --dataset_name tqa_qwen --calculate_metric 1
 ```
 我们将会输出你的压缩产物与原始KV cache的压缩比，近似性（RMSE）等参数，以及使用还原后的KV cache进行推理的prediction结果准确度（F1 score）
 dataset_name 可选：tqa_qwen nqa_qwen mqa_qwen。请对应修改results_dir
